@@ -54,4 +54,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     def picassoVersion = "2.71828"
     implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
 }

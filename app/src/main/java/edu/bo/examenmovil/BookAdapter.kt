@@ -1,20 +1,13 @@
 package edu.bo.examenmovil
-import android.content.ContentValues.TAG
-import android.content.Context
-import android.icu.number.NumberFormatter.with
-import android.icu.number.NumberRangeFormatter.with
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row.view.*
-import android.widget.ImageView
-import android.widget.TextView
+import kotlinx.coroutines.CoroutineScope
 
-class BookAdapter(val arrayList: ArrayList<Book>,val context: Context):
+class BookAdapter(val arrayList: ArrayList<Book>, val context: CoroutineScope):
     RecyclerView.Adapter<BookAdapter.ViewHolder>() {
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         fun bindItems(book: Book){

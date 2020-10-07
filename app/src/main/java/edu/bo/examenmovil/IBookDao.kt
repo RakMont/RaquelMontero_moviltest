@@ -1,9 +1,6 @@
 package edu.bo.examenmovil
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 
 @Dao
@@ -15,7 +12,17 @@ interface IBookDao {
     /* @Query("SELECT * FROM book_table"+" WHERE title LIKE :title")
      fun findByTitle(first: String, last: String): Book*/
     @Insert
-    fun insertAll(vararg users: Book)
+    fun insertAll(vararg books: Book)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insertBook(user: Book)
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    fun updateBook(user: Book)
+
+    @Query("DELETE FROM book_table WHERE id IN (:id)")
+    fun deleteOneBook(id:Int)
+
     @Delete
-    fun delete(user: Book)
+    fun delete(book: Book)
 }

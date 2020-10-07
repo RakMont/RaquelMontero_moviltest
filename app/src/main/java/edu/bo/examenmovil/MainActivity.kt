@@ -1,5 +1,6 @@
 package edu.bo.examenmovil
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,7 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        insertbook.setOnClickListener()
+        insertbook.setOnClickListener{
+            val intent = Intent(this@MainActivity, FormBookActivity::class.java)
+            startActivity(intent)
+        }
         GlobalScope.launch {
             val bookDao = AppRoomDatabase.getDatabase(applicationContext).bookDato()
             val repository = BookRepository(bookDao)

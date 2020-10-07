@@ -5,7 +5,20 @@
     <string name="editorial">editorial</string>
     <string name="author">author</string>
     <string name="description">description</string>
-    <string name="insert_btn">Insertar libro</string>
+    <string name="insert_btn">Insert Book</string>
     <string name="submit">Submit</string>
+    <string name="formTitle">Title</string>
+    <string name="inputTitle"></string>
+    <string name="formPage">Page</string>
+    <string name="inputPage" />
+    <string name="formEditorial">Editorial</string>
+    <string name="inputEditorial" />
+    <string name="formAutor">Author</string>
+    <string name="inputAutor" />
+    <string name="btn_confirmar_libro">Create Book</string>
+    <string name="formDescripcion">Description</string>
+    <string name="inputDescripcion" />
+    <string name="formphoto_url">Photo URL</string>
+    <string name="inputphoto" />
 
 </resources>

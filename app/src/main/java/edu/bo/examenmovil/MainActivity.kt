@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        insertbook.setOnClickListener()
         GlobalScope.launch {
             val bookDao = AppRoomDatabase.getDatabase(applicationContext).bookDato()
             val repository = BookRepository(bookDao)
@@ -47,6 +48,9 @@ class MainActivity : AppCompatActivity() {
 
         }
         val arrayList= ArrayList<Book>()
+        arrayList.add(Book("The knight in rusty armor","dfgsdfs","sdfsdf","sdfsd","sdfsd","https://boutiquedezothique.es/1503-large_default/los-mitos-de-cthulhu.jpg"))
+        arrayList.add(Book("The knight in rusty armor","dfgsdfs","sdfsdf","sdfsd","sdfsd","https://boutiquedezothique.es/1503-large_default/los-mitos-de-cthulhu.jpg"))
+        arrayList.add(Book("The knight in rusty armor","dfgsdfs","sdfsdf","sdfsd","sdfsd","https://boutiquedezothique.es/1503-large_default/los-mitos-de-cthulhu.jpg"))
         arrayList.add(Book("The knight in rusty armor","dfgsdfs","sdfsdf","sdfsd","sdfsd","https://boutiquedezothique.es/1503-large_default/los-mitos-de-cthulhu.jpg"))
         arrayList.add(Book("The knight in rusty armor","dfgsdfs","sdfsdf","sdfsd","sdfsd","https://boutiquedezothique.es/1503-large_default/los-mitos-de-cthulhu.jpg"))
 
